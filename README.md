@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png">
-  <img alt="FreeFlow Logo" src="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png" height="200px">
+  <img alt="FreeFlow Logo" src="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png" height="250px">
 </picture>
 <br>
 Enhancing Learning Resources for University Students
@@ -32,13 +32,15 @@ Resource Recommendation: FreeFlow employs intelligent algorithms to recommend le
 
 # Documentation
 
+FreeFlow comes with a simple work-*flow* . Hence, our documentation is straight forward. 
+
 ## Requirements
 
-Node.js (version X.X.X)
-npm (version X.X.X)
-SQL/MongoDB (version X.X.X)
-react ??
-stuff
+- Node.js (version X.X.X)
+- npm (version X.X.X)
+- MySQL (version X.X.X)
+- React ??
+- stuff
 
 ## Installation & Usage
 
