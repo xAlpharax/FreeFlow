@@ -8,7 +8,7 @@ Enhancing Learning Resources for University Students
 </div>
 
 # FreeFlow
-My team's Code and Notes throughout the BEST Brasov Hackathon competition @ https://hackathon.bestbrasov.ro/
+My team's Code and Notes throughout BEST Brasov Hackathon @ https://hackathon.bestbrasov.ro/
 
 FreeFlow: Enhancing Learning Resources for University Students
 FreeFlow - Learn free in a different flow.
