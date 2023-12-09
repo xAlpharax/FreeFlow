@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png">
-  <img alt="FreeFlow Logo" src="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png" height="250px">
+  <img alt="FreeFlow Logo" src="https://github.com/xAlpharax/FreeFlow/blob/master/assets/FreeFlowLogo.png" height="200px">
 </picture>
 <br>
 Enhancing Learning Resources for University Students
