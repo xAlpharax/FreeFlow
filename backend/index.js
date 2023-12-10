@@ -19,7 +19,7 @@ app.use(passport.session());
 
 app.set('view engine', 'ejs');
 
-app.get('/success', (req, res) => res.redirect(""));
+app.get('/success', (req, res) => res.redirect("http://localhost:3000/"));
 app.get('/error', (req, res) => res.send("error logging in"));
 
 passport.serializeUser(function(user, cb) {
@@ -101,6 +101,33 @@ app.post('/courses', async (req, res) => {
     } catch (error) {
 
     }
+})
+app.get('/user_data/:param', async (req, res) => {
+  var request_parameter = req.params.param ;
+  try {
+    switch (request_parameter) {
+      case 'all':
+        var response = await prisma.course.findMany();
+        res.send(response);
+        break;
+      default:
+        var response = await prisma.user.findMany({
+          where:{
+            id: {
+              equals: parseInt(request_parameter)
+            },
+            include: {
+              user_data: true
+            }
+          }
+        });
+        res.send(response);
+        break;
+    }
+  } catch (error) {
+    res.status(500);
+    res.send({"error" : "Nu au fost gasite rezultate"});
+  }
 })
 
 app.listen(port, () => {
