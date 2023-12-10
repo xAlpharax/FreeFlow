@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id              Int               @id @default(autoincrement())
+  user_data_id    Int               @unique
+  email           String            @unique
+  password        String
+  username        String            @unique
+  user_data       user_data         @relation(fields: [user_data_id], references: [id])
+  course          course?
+  course_feedback course_feedback[]
+}
+
+model tag {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+}
+
+model course {
+  id              Int               @id @default(autoincrement())
+  title           String            @unique
+  description     String            @unique
+  author_id       Int               @unique
+  author          user              @relation(fields: [author_id], references: [id])
+  tags            Json
+  course_feedback course_feedback[]
+
+  course_data course_data[]
+}
+
+model user_data {
+  id             Int   @id @default(autoincrement())
+  total_seconds  Int
+  total_articles Int
+  user           user?
+}
+
+model course_data {
+  id            Int     @id @default(autoincrement())
+  total_readers Int
+  course        course? @relation(fields: [courseId], references: [id])
+  courseId      Int?
+}
+
+model course_feedback {
+  id             Int    @id @default(autoincrement())
+  feedback_value Int
+  feedback_text  String
+  course_id      Int
+  author_id      Int
+  author         user   @relation(fields: [author_id], references: [id])
+  course         course @relation(fields: [course_id], references: [id])
+}

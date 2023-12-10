@@ -1,0 +1,10 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+.background{
+    background-color: #010001 !important;
+}
+.background2{
+    background-color: #9400FF !important;
+}
+.text-logo{
+    color: #9400FF !important;
+}

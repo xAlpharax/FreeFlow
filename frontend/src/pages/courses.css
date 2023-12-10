@@ -1,0 +1,45 @@
+
+/* Culorile săgeților active */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+}
+
+/* Culorile săgeților la hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: darkgrey;
+}
+
+/* Culorile săgeților inactive */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: grey;
+}
+/* Adaugă acest cod CSS în fișierul tău de stiluri (de exemplu, App.css) */
+
+/* Sageti de parcurgere - pozitionare mai in exterior */
+.carousel-control-prev, .carousel-control-next {
+    transform: translateY(250%);
+  }
+  
+  /* Sageti de parcurgere - setare distanta intre sageti si marginea carousel-ului */
+  .carousel-control-prev {
+    margin-left: -3rem; /* Ajusteaza distanta pe orizontala la stanga */
+  }
+  
+  .carousel-control-next {
+    margin-right: -3rem; /* Ajusteaza distanta pe orizontala la dreapta */
+  }
+  /* Adaugă acest cod CSS în fișierul tău de stiluri (de exemplu, App.css) */
+
+/* Stilizare dimensiune sageti de parcurgere */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px; /* Lățimea săgeților */
+    height: 50px; /* Înălțimea săgeților */
+    font-size: 24px; /* Dimensiunea textului săgeților (dacă sunt utilizate iconițe) */
+    line-height: 3rem; /* Ajustează înălțimea liniei pentru a centra textul (dacă sunt utilizate iconițe) */
+  }
+  
+  /* Alte stilizari pot fi adaugate aici */
+  
