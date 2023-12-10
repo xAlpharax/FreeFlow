@@ -10,9 +10,7 @@ Enhancing Learning Resources for University Students
 # FreeFlow
 My team's Code and Notes throughout BEST Brasov Hackathon @ https://hackathon.bestbrasov.ro/
 
-FreeFlow: Enhancing Learning Resources for University Students
-FreeFlow - Learn free in a different flow.
-Learning made easy
+FreeFlow - Learn free with a different flow.
 
 # Description / Proposition
 
@@ -26,21 +24,21 @@ LTI Support: Leveraging the Learning Tools Interoperability standard, FreeFlow s
 
 Node.js Backend: The backend is powered by Node.js, ensuring scalability, efficiency, and a robust server infrastructure.
 
-React Frontend: The frontend is built with React, providing a responsive and dynamic user interface for an optimal user experience.
+React Frontend: The frontend is built with React, providing a responsive and dynamic user interface for an optimal user experience within a single page application soon to be PWA.
 
-Resource Recommendation: FreeFlow employs intelligent algorithms to recommend learning resources based on user behavior, preferences, and academic progress.
+Resource Recommendation: FreeFlow employs intelligent algorithms to recommend learning resources based on user behavior, preferences, and academic progress with the help of Artificial Intelligence.
 
 # Documentation
 
-FreeFlow comes with a simple work-*flow* . Hence, our documentation is straight forward. 
+FreeFlow comes with a simple and straight forward work-*flow* .
 
 ## Requirements
 
-- Node.js (version X.X.X)
-- npm (version X.X.X)
-- MySQL (version X.X.X)
-- React ??
-- stuff
+- Node.js
+- npm
+- MySQL
+- Prisma
+- React
 
 ## Installation & Usage
 
@@ -56,7 +54,7 @@ Navigate to the project directory:
 cd FreeFlow
 ```
 
-Install dependencies:
+Install dependencies in each respective directories:
 
 ```bash
 npm install
@@ -65,16 +63,25 @@ npm install
 Configure environment variables:
 
 Create a .env file in the root directory.
-- Define the required environment variables.
+- Define the required environment variables. (DATABASE_URL="mysql://dbuser:passwd@ip:3306/freeflow")
 - Refer to .env.example for guidance.
+
+Optionally, populate the database with toy data:
+
+```bash
+# npx prisma migrate dev
+# node populate_prisma.js
+```
 
 Start the application:
 
 ```bash
-npm start
+node index.js
 ```
 
-Visit http://localhost:3000 in your browser.
+Visit http://localhost:12000 in your browser.
+
+Feel free to extend it to your deployment solution or other means of serving the application to a wider audience.
 
 ## Contribuiting
 
@@ -84,8 +91,10 @@ Fork the repository.
 Create a new branch for your feature or bug fix.
 Make your changes and commit them with descriptive messages.
 Push your changes to your fork.
-Submit a pull request.
+Submit a pull request with a detailed description to this repo.
+
+And thank you! We will look forward to implementing your changes.
 
 ## License
 
-FreeFlow is software released under the GNU Affero General Public License (AGPL).
+FreeFlow is software released under the GNU Affero General Public License (AGPL) , you can learn more about it [here](https://www.gnu.org/licenses/agpl-3.0.en.html).
