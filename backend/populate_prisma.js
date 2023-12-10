@@ -34,36 +34,36 @@ async function seedDatabase() {
   // Insert tags
   const tag1 = await prisma.tag.create({
     data: {
-      name: 'Tag1',
+      name: 'Programming',
     },
   });
 
   const tag2 = await prisma.tag.create({
     data: {
-      name: 'Tag2',
+      name: 'Science',
     },
   });
 
   // Insert courses
   const course1 = await prisma.course.create({
     data: {
-      title: 'Course 1',
-      description: 'Description 1',
+      title: 'Introduction to Computer Science',
+      description: 'https://pll.harvard.edu/course/cs50-introduction-computer-science',
       author: {
         connect: { id: user1.id },
       },
-      tags: ['Tag1', 'Tag2'],
+      tags: ['Programming'],
     },
   });
 
   const course2 = await prisma.course.create({
     data: {
-      title: 'Course 2',
-      description: 'Description 2',
+      title: 'Introduction to Artificial Intelligence with Python',
+      description: 'https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python',
       author: {
         connect: { id: user2.id },
       },
-      tags: ['Tag1'],
+      tags: ['Programming', 'Science'],
     },
   });
 
@@ -79,7 +79,7 @@ async function seedDatabase() {
 
   const courseData2 = await prisma.course_data.create({
     data: {
-      total_readers: 30,
+      total_readers: 700,
       course: {
         connect: { id: course2.id },
       },
@@ -89,13 +89,13 @@ async function seedDatabase() {
   // Insert course feedback
   await prisma.course_feedback.create({
     data: {
-      feedback_value: 4,
-      feedback_text: 'Good course!',
+      feedback_value: 5,
+      feedback_text: 'Great course!',
       course: {
-        connect: { id: course1.id },
+        connect: { id: course2.id },
       },
       author: {
-        connect: { id: user1.id },
+        connect: { id: user2.id },
       },
     },
   });
